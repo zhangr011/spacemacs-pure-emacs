@@ -1,0 +1,1 @@
+# spacemacs-pure-emacs
