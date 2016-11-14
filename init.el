@@ -323,6 +323,9 @@ you should place your code here."
   (spacemacs|diminish ggtags-mode)
   (spacemacs|diminish which-key-mode)
   (spacemacs|diminish spacemacs-whitespace-cleanup-mode)
+  (add-hook 'emacs-lisp-mode-hook (lambda ()
+                                    (fci-mode 1)
+                                    ))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
