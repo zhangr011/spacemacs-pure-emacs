@@ -46,7 +46,7 @@
 ;; (global-set-key (kbd "C-`") 'toggle-input-method)
 ;; (global-set-key (kbd "s-d") 'zilongshanren/my-mc-mark-next-like-this)
 ;; (bind-key* "s-r" 'mc/reverse-regions)
-(global-set-key (kbd "<f5>") 'zilongshanren/run-current-file)
+;; (global-set-key (kbd "<f5>") 'zilongshanren/run-current-file)
 
 ;; "http://endlessparentheses.com/transposing-keybinds-in-emacs.html?source=rss"
 ;; (global-set-key "\C-t" #'transpose-lines)
