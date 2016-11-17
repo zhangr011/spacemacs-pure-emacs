@@ -65,6 +65,7 @@ values."
                       auto-completion-enable-snippets-in-popup t
                       :disabled-for org markdown)
      zilongshanren
+     moyou-erlang
      ;; version-control
      )
    ;; List of additional packages that will be installed without being

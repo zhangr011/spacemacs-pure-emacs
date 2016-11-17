@@ -38,7 +38,6 @@
         gist
         hydra
         wrap-region
-        helm-ag
         ranger
         golden-ratio
         ))
@@ -479,16 +478,6 @@ Search for a search tool in the order provided by `dotspacemacs-search-tools'."
       (spacemacs/set-leader-keys-for-major-mode 'gist-list-mode
         "." 'spacemacs/gist-list-mode-transient-state/body))
     ))
-
-(defun zilongshanren-misc/init-peep-dired ()
-  ;;preview files in dired
-  (use-package peep-dired
-    :defer t
-    :commands (peep-dired-next-file
-               peep-dired-prev-file)
-    :bind (:map dired-mode-map
-                ("P" . peep-dired))))
-
 
 (defun zilongshanren-misc/post-init-flyspell-correct ()
   (progn
