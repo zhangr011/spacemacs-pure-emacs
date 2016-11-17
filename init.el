@@ -268,7 +268,7 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers t
+   dotspacemacs-line-numbers nil
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -322,13 +322,15 @@ you should place your code here."
   ;; force horizontal split window
   (setq split-width-threshold 120)
   (global-hungry-delete-mode t)
+  ;; line number auto on
+  (global-linum-mode)
+  (add-hook 'emacs-lisp-mode-hook (lambda ()
+                                    (fci-mode 1)
+                                    ))
   (spacemacs|diminish helm-gtags-mode)
   (spacemacs|diminish ggtags-mode)
   (spacemacs|diminish which-key-mode)
   (spacemacs|diminish spacemacs-whitespace-cleanup-mode)
-  (add-hook 'emacs-lisp-mode-hook (lambda ()
-                                    (fci-mode 1)
-                                    ))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
