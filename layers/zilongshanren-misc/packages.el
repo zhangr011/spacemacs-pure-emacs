@@ -30,7 +30,6 @@
         tiny
         ;; smartparens
         flyspell-correct
-        peep-dired
         markdown-mode
         swiper
         magit
