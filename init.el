@@ -65,7 +65,6 @@ values."
      (auto-completion :variables auto-completion-enable-sort-by-usage t
                       auto-completion-enable-snippets-in-popup t
                       :disabled-for org markdown)
-     zilongshanren
      moyou-erlang
      ;; version-control
      )
