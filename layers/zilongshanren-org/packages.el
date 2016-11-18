@@ -187,10 +187,11 @@
          (sh . t)
          (dot . t)
          (js . t)
-         (latex .t)
+         (latex . t)
          (python . t)
          (emacs-lisp . t)
          (plantuml . t)
+         (erlang . t)
          (C . t)
          (ditaa . t)))
 
