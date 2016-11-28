@@ -30,7 +30,9 @@
 ;;; Code:
 
 (defconst moyou-erlang-packages
-  '()
+  '(
+    company
+    )
   "The list of Lisp packages required by the moyou-erlang layer.
 
 Each entry is either:
@@ -58,5 +60,21 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
+(defun moyou-erlang/post-init-company ()
+  (progn
+    (setq company-minimum-prefix-length 1
+          company-idle-delay 0.08)
+
+    (when (configuration-layer/package-usedp 'company)
+      (spacemacs|add-company-hook shell-script-mode)
+      (spacemacs|add-company-hook makefile-bsdmake-mode)
+      (spacemacs|add-company-hook sh-mode)
+      (spacemacs|add-company-hook lua-mode)
+      (spacemacs|add-company-hook nxml-mode)
+      (spacemacs|add-company-hook conf-unix-mode)
+      (spacemacs|add-company-hook json-mode)
+      (spacemacs|add-company-hook graphviz-dot-mode)
+      )
+    ))
 
 ;;; packages.el ends here
