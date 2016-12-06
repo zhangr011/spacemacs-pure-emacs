@@ -326,6 +326,8 @@ you should place your code here."
   ;; force horizontal split window
   (setq split-width-threshold 120)
   (global-hungry-delete-mode t)
+  ;; , 后自动插入空格
+  (global-set-key (kbd ",") #'(lambda () (interactive) (insert ", ")))
   ;; line number auto on
   (global-linum-mode)
   (define-globalized-minor-mode
