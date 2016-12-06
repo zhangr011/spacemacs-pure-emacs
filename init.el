@@ -324,9 +324,9 @@ you should place your code here."
   (global-hungry-delete-mode t)
   ;; line number auto on
   (global-linum-mode)
-  (add-hook 'emacs-lisp-mode-hook (lambda ()
-                                    (fci-mode 1)
-                                    ))
+  (define-globalized-minor-mode
+    global-fci-mode fci-mode (lambda () (fci-mode 1)))
+  (global-fci-mode 1)
   (spacemacs|diminish helm-gtags-mode)
   (spacemacs|diminish ggtags-mode)
   (spacemacs|diminish which-key-mode)
